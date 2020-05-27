@@ -6,8 +6,12 @@ namespace Test_Progetto_Bioinf
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethod1() 
         {
+           static void (string[] args)
+            {
+                
+            }
         }
     }
 }

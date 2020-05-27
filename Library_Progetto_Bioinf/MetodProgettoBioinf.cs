@@ -5,26 +5,45 @@ namespace Library_Progetto_Bioinf
 {
     public class MetodProgettoBioinf
     {
-        public static string a = "resistente.txt";
-        public static string b = "sensibile.txt";
-        public static string ReadSens()
+        public static string res = "resistente.txt";
+        public static string sens = "sensibile.txt";
+        public static string ReadRes()
         {
-            string lines = " ";
-            if (File.Exists(b))
+            string lineres = "";
+            if (File.Exists(res))
             {
-                using (StreamReader sr = new StreamReader(b))
+                using (StreamReader srres = new StreamReader(res))
                 {
-                    lines = sr.ReadToEnd();
+                    lineres = srres.ReadToEnd();
                 }
             }
-            return lines;
+            return lineres;
+        }
+        public static string ReadSens()
+        {
+            string linesens = "";
+            if (File.Exists(sens))
+            {
+                using (StreamReader srsens = new StreamReader(sens))
+                {
+                    linesens = srsens.ReadToEnd();
+                }
+            }
+            return linesens;
         }
 
         public static int Sensibile()
         {
-            string lines = MetodProgettoBioinf.ReadSens();
-            int blength = lines.Length;
-            return blength;
+            string linesens = MetodProgettoBioinf.ReadSens();
+            int senslength = linesens.Length;
+            return senslength;
+        }
+
+        public static int Resistente()
+        {
+            string lineres = MetodProgettoBioinf.ReadRes();
+            int reslenght = lineres.Length;
+            return reslenght;
         }
     }
 }
