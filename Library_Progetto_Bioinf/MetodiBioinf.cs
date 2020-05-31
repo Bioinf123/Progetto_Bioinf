@@ -43,17 +43,6 @@ namespace Progetto_Bioinf
             int lengthsensibile = linesens.Length;
             return lengthsensibile;
         }
-        public static int Diverso()
-        {
-            string res = MetodiBioinf.ReadRes();
-            string sens = MetodiBioinf.ReadSens();
-            for (int i = 0; i < Math.Min(sens.Length, res.Length); i++)
-            {
-                if (sens[i] != res[i])
-                    return i;
-            }
-            return -1;
-        }
         public static string Uguale()
         {
             string res = MetodiBioinf.ReadRes();
@@ -65,6 +54,17 @@ namespace Progetto_Bioinf
                 u += sens[i];
             }
             return u;
+        }
+        public static int Diverso()
+        {
+            string res = MetodiBioinf.ReadRes();
+            string sens = MetodiBioinf.ReadSens();
+            for (int i = 0; i < Math.Min(sens.Length, res.Length); i++)
+            {
+                if (sens[i] != res[i])
+                    return i;
+            }
+            return -1;
         }
         public static int Stringhe()
         {

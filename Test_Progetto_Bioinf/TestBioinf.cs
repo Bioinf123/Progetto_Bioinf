@@ -6,20 +6,19 @@ namespace Test_Progetto_Bioinf
     public class TestBioinf
     {
         [TestMethod]
+        public void TestResistente()
+        {
+
+            long lenght = 3901;
+            long lunghezza = Progetto_Bioinf.MetodiBioinf.Resistente();
+            Assert.AreEqual(lenght, lunghezza);
+        }
+        [TestMethod]
         public void TestSensibile()
         {
 
             long lenght = 3901;
             long lunghezza = Progetto_Bioinf.MetodiBioinf.ReadSens();
-            Assert.AreEqual(lenght, lunghezza);
-        }
-
-        [TestMethod]
-        public void TestResistente()
-        {
-
-            long lenght = 3901;
-            long lunghezza = Progetto_Bioinf.Metodi.Resistente();
             Assert.AreEqual(lenght, lunghezza);
         }
     }
